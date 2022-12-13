@@ -4,7 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rsa = { version = "0.7.2" }
-# This would fix the error:
-#rsa = { workspace = true }
-#rsa = { version = "0.7.2", default-features = false }
+a = { workspace = true, features = ["feature"] }

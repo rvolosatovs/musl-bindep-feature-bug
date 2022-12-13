@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rsa = { workspace = true }
+a = { workspace = true }
 
 # This causes build failure with `cargo build --target x86_64-unknown-linux-musl`:
 dep = { version = "0.1.0", path = "crates/dep", artifact = "bin", target = "x86_64-unknown-linux-musl" }
@@ -14,6 +14,7 @@ dep = { version = "0.1.0", path = "crates/dep", artifact = "bin", target = "x86_
 #dep = { version = "0.1.0", path = "crates/dep" }
 
 [workspace.dependencies]
-rsa = { version = "0.7.2", default-features = false }
-# This would fix the error:
-#rsa = { version = "0.7.2" }
+a = { version = "0.1.0", path = "crates/a", default-features = false }
+b = { version = "0.1.0", path = "crates/b", default-features = false }
+c = { version = "0.1.0", path = "crates/c", default-features = false }
+d = { version = "0.1.0", path = "crates/d", default-features = false }
